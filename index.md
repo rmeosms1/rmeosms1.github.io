@@ -1,37 +1,255 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/rmeosms1/rmeosms1.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+<!DOCTYPE html>
+<html>
+<head>
+<title>초대합니다 :-)</title>
+<meta charset="euc-kr" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<meta property="og:site_name" content="babyparty" />
+<meta property="og:title" content="우리아이 생일을 축하해 주세요." />
+<meta property="og:description" content="2016년 2월 3일 오후 1시, 봄파티에서 우리아이 생일을 축하해주세요~" />
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/16554116/12774533/375b55dc-ca89-11e5-9829-e5984d1d2efa.jpg" />
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/16554116/12774535/375cf090-ca89-11e5-8589-c69d0f62defb.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="rmsidtest.github.io" />
 
-### Markdown
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: 100%;
+}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+html,body {
+	height: 100%;
+}
 
-```markdown
-Syntax highlighted code block
+body {
+	background-color: #eee;
+}
 
-# Header 1
-## Header 2
-### Header 3
+#wrap {
+	max-width: 500px;
+	margin: 0 auto;
+	background-color: #fff;
+	height: auto;
+}
 
-- Bulleted
-- List
+.img100 {
+	max-width: 100%;
+	width: auto !important;
+	width: 100%;
+}
 
-1. Numbered
-2. List
+#autoplay, .slide_wrap {
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
 
-**Bold** and _Italic_ and `Code` text
+.content_wrap {
+	font-size: 14px;
+	text-align: center;
+	padding-top: 15px;
+	margin: 0 15px;
+	color: #8d968c;
+	line-height: 20px;
+}
 
-[Link](url) and ![Image](src)
-```
+.content_wrap h1 {
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 15px;
+	color: #50a27f;
+}
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+.content_wrap h1 img {
+	height: 40px;
+	vertical-align: middle;
+}
 
-### Jekyll Themes
+.contact_wrap {
+	text-align: center;
+	padding-top: 15px;
+}
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rmeosms1/rmeosms1.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+.contact_wrap a {
+	font-size: 15px;
+	color: #2f302c;
+	font-weight: bold;
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	min-width: 40px;
+	border-radius: 5px;
+}
 
-### Support or Contact
+.contact_wrap a.bg1 {
+	background-color: #bbedc8;
+}
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+.contact_wrap a.bg2 {
+	background-color: #9bddbe;
+}
+
+.contact_wrap a.bg3 {
+	background-color: #ccf2cb;
+}
+
+.contact_wrap img {
+	height: 15px;
+	padding-right: 5px;
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
+}
+
+.date_wrap {
+	margin: 0 15px;
+	padding: 20px 0 0 0;
+	text-align: left;
+	font-size: 13px;
+}
+
+.date_wrap img {
+	height: 15px;
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
+	padding-right: 5px;
+}
+
+.addr_wrap {
+	margin: 0 15px;
+	padding: 10px 0;
+	text-align: left;
+	font-size: 13px;
+}
+
+.addr_wrap img {
+	height: 15px;
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
+	padding-right: 5px;
+}
+
+.map_wrap {
+	margin: 0 15px;
+	height: 330px;
+	background-color: #ddd;
+	text-align: center;
+	font-size: 14px;
+}
+
+.tras_wrap {
+	margin: 0 15px;
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+
+.tras_wrap div {
+	padding-top: 10px;
+}
+
+.tras_wrap div.what {
+	color: #888;
+}
+
+.tras_wrap div.is {
+	color: #8d968c;
+	font-weight: bold;
+	margin: 0 20px;
+}
+
+.tras_wrap img {
+	height: 14px;
+	vertical-align: middle;
+	position: relative;
+	top: -3px;
+	padding-right: 5px;
+}
+.copy {
+	font-size:12px;
+	color:#888;
+	text-align:center;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.slick-prev,.slick-next {
+	display:none !important;
+}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="slide_wrap">
+			<div id="autoplay" style="display:none;">
+				<!-- //이미지 추가 -->
+				<img src="images/1.jpg" class="img100" />
+				<img src="images/2.jpg" class="img100" />
+				<img src="images/3.jpg" class="img100" />
+			</div>
+		</div>
+		<div class="content_wrap">
+			<h1><img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack/110/Party-Poppers-128.png" alt="icon finder free icon" />상견례 안내장<img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack/110/Party-Poppers-128.png" alt="icon finder free icon" /></h1>
+			아버님, 어머님<br />
+			안녕하십니까<br />
+			장소가 약간 떨어져 있어 안내를 위해<br />
+			상견례 안내장을 보내드립니다.<br />
+			오시는 길 어렵지않게 지도 참조해 주시기 바랍니다.
+		</div>
+		<div class="contact_wrap">
+			<a href="tel:010-2463-3806" class="bg1"><img src="https://cdn4.iconfinder.com/data/icons/miu/24/device-iPhone-smartphone-vertical-glyph-128.png" alt="tel">김영두</a>
+			<a href="tel:010-3465-1109" class="bg2"><img src="https://cdn4.iconfinder.com/data/icons/miu/24/device-iPhone-smartphone-vertical-glyph-128.png" alt="tel">문은주</a>			
+		</div>
+		<div class="date_wrap">
+			<span><img src="https://cdn2.iconfinder.com/data/icons/office-38/24/office-40-128.png" alt="time" />일시 : <strong>2017년 07월 08일 오후 12시</strong></span>
+		</div>
+		<div class="addr_wrap">
+			<span><img src="https://cdn4.iconfinder.com/data/icons/miu/24/house-home-real_estate-property-glyph-128.png" alt="place" />장소 : <strong>예향재</strong> | 경기 의정부시 동일로 860-22</span>
+		</div>
+		<div class="map_wrap" id="map">
+					<!-- * Daum 지도 - 지도퍼가기 -->
+					<!-- 1. 지도 노드 -->
+					<div id="daumRoughmapContainer1497339287081" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+					
+					<!--
+						2. 설치 스크립트
+						* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+					-->
+					<script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
+					
+					<!-- 3. 실행 스크립트 -->
+					<script charset="UTF-8">
+						new daum.roughmap.Lander({
+							"timestamp" : "1497339287081",
+							"key" : "i68a",
+							"mapWidth" : "470",
+							"mapHeight" : "300"
+						}).render();
+					</script>
+
+		</div>
+		<div class="tras_wrap">
+			<div>
+				<div class="what"><img src="https://cdn2.iconfinder.com/data/icons/vehicles-7/24/vehicles-04-128.png" alt="metro" />오시는길</div>
+				<div class="is">고읍방면으로 오셔서 주내교회, 주내파출소를 지나 장춘교차로에서 좌회전 후 착한낙지 바로 전 입구입니다.</div>
+			</div>
+		</div>
+		<div class="copy">
+			ⓒ Copyright 2017, 김영두
+		</div>
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+	
+</body>
+</html>
