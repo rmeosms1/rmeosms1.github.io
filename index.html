@@ -214,25 +214,52 @@ body {
 			<span><img src="https://cdn4.iconfinder.com/data/icons/miu/24/house-home-real_estate-property-glyph-128.png" alt="place" />장소 : <strong>예향재</strong> | 경기 의정부시 동일로 860-22</span>
 		</div>
 		<div class="map_wrap" id="map">
-					<!-- * Daum 지도 - 지도퍼가기 -->
-					<!-- 1. 지도 노드 -->
-					<div id="daumRoughmapContainer1497339287081" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-					
-					<!--
-						2. 설치 스크립트
-						* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-					-->
-					<script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
-					
-					<!-- 3. 실행 스크립트 -->
-					<script charset="UTF-8">
-						new daum.roughmap.Lander({
-							"timestamp" : "1497339287081",
-							"key" : "i68a",
-							"mapWidth" : "470",
-							"mapHeight" : "300"
-						}).render();
-					</script>
+	  <script src="http://apis.daum.net/maps/maps3.js?apikey=e17923c11536d420e89e5df42a8f9bec"></script>
+		  <script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		    mapOption = {
+		        center: new daum.maps.LatLng(37.76210, 127.04679), // 지도의 중심좌표
+		        level: 3, // 지도의 확대 레벨
+		        mapTypeId : daum.maps.MapTypeId.ROADMAP // 지도종류
+		    }; 
+
+		// 지도를 생성한다 
+		var map = new daum.maps.Map(mapContainer, mapOption); 
+
+		// 지도 타입 변경 컨트롤을 생성한다
+		var mapTypeControl = new daum.maps.MapTypeControl();
+
+		// 지도의 상단 우측에 지도 타입 변경 컨트롤을 추가한다
+		map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);	
+
+		// 지도에 확대 축소 컨트롤을 생성한다
+		var zoomControl = new daum.maps.ZoomControl();
+
+		// 지도의 우측에 확대 축소 컨트롤을 추가한다
+		map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+		// 지도 확대 레벨 변화 이벤트를 등록한다
+		daum.maps.event.addListener(map, 'zoom_changed', function () {
+			console.log('지도의 현재 확대레벨은 ' + map.getLevel() +'레벨 입니다.');
+		});
+
+		// 지도 클릭 이벤트를 등록한다 (좌클릭 : click, 우클릭 : rightclick, 더블클릭 : dblclick)
+		daum.maps.event.addListener(map, 'click', function (mouseEvent) {
+			console.log('지도에서 클릭한 위치의 좌표는 ' + mouseEvent.latLng.toString() + ' 입니다.');
+		});	
+
+		// 지도 드래깅 이벤트를 등록한다 (드래그 시작 : dragstart, 드래그 종료 : dragend)
+		daum.maps.event.addListener(map, 'drag', function () {
+			var message = '지도를 드래그 하고 있습니다. ' + 
+							'지도의 중심 좌표는 ' + map.getCenter().toString() +' 입니다.';
+			console.log(message);
+		});
+
+		// 지도에 마커를 생성하고 표시한다
+		var marker = new daum.maps.Marker({
+		    position: new daum.maps.LatLng(37.76210, 127.04679), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		});
 
 		</div>
 		<div class="tras_wrap">
