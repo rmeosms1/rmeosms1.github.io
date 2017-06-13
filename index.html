@@ -248,30 +248,9 @@ body {
 	<script>
 	var latlng = "37.378100, 127.112298"; //구글맵에서 위치 검색 후, 맵을 클릭하면 나오는 하단의 좌표를 입력한다.
 
-	function initMap() {
-		if (latlng.length <= 0)
-			return false;
-		arr = latlng.split(",");
-		if (arr.length <= 1)
-			return false;
 
-		var myLatLng = {
-			lat : parseFloat($.trim(arr[0])),
-			lng : parseFloat($.trim(arr[1]))
-		};
-		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom : 17,
-			center : myLatLng
-		});
-		var arr = [];
-
-		new google.maps.Marker({
-			position : myLatLng,
-			map : map
-		});
-	}
 	$(function(e) {
-		initMap();
+
 		
 		var targetEle = $("#autoplay");
 		targetEle.find("img").css("cssText" , "width:" + targetEle.width() + "px !important;");
